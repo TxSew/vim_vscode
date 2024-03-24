@@ -39,7 +39,23 @@
       "before": ["<leader>", "a"],
       "after": ["A"]
     },
+    {
+      "before": ["<leader>", "{"],
+      "after": ["[", "{"]
+    },
+    {
+      "before": ["<leader>", "}"],
+      "after": ["]", "}"]
+    },
 
+    {
+      "before": ["<leader>", "("],
+      "after": ["[", "("]
+    },
+    {
+      "before": ["<leader>", ")"],
+      "after": ["]", ")"]
+    },
     {
       "before": ["<leader>", "i"],
       "after": ["I"]
@@ -49,21 +65,14 @@
       "commands": [":nohl"]
     },
     {
-      "before": ["<tab>"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
       "before": ["<S-tab>"],
       "commands": ["workbench.action.previousEditor"]
     },
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["<leader>", "e"],
       "commands": ["revealInExplorer"]
     },
+
     {
       "before": ["<leader>", "h"],
       "after": ["_"]
@@ -114,10 +123,6 @@
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
-    },
-    {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.commentLine", "extension.vim_escape"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -133,17 +138,16 @@
       "before": ["g", "l"],
       "after": ["g", "t"]
     },
-    { "before": ["<S-h>"], "commands": [":bprevious"] },
-    { "before": ["<S-l>"], "commands": [":bnext"] },
+    // { "before": ["<S-h>"], "commands": [":bprevious"] },
+    // { "before": ["<S-l>"], "commands": [":bnext"] },
     {
       "before": ["leader", "h"],
       "commands": ["workbench.action.focusLeftGroup"]
     },
     {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
     },
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     {
       "before": ["leader", "l", "f"],
       "commands": ["editor.action.formatDocument"]
@@ -175,17 +179,7 @@
     {
       "before": ["K"],
       "after": ["5", "k"]
-    },
-    {
-      "before": ["<leader>", "j"],
-      "after": ["5", "j"]
-    },
-    {
-      "before": ["<leader>", "k"],
-      "after": ["5", "k"]
-    },
-    { "before": ["leader", "v"], "commands": [":vsplit"] },
-    { "before": ["leader", "s"], "commands": [":split"] }
+    }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
     {
@@ -193,11 +187,6 @@
       "after": ["i("]
     },
 
-    //hello
-    {
-      "before": ["<leader>", "s"],
-      "commands": ["workbench.action.splitEditor"]
-    },
     {
       "key": "ctrl+l",
       "command": "workbench.action.focusRightGroup",
@@ -215,9 +204,8 @@
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
     // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
   ],
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -255,8 +243,40 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.colorCustomizations": {
-    "statusBar.background": "#B48E49",
-    "statusBar.noFolderBackground": "#B48E49",
-    "statusBar.debuggingBackground": "#B48E49"
+    "statusBar.background": "#3a6680",
+    "statusBar.noFolderBackground": "#3a6680",
+    "statusBar.debuggingBackground": "#3a6680",
+    "statusBar.foreground": "#ffff",
+    "statusBar.debuggingForeground": "#ffff"
+  },
+  "terminal.integrated.env.linux": {},
+  "workbench.colorTheme": "Dracula",
+  "editor.fontFamily": "'Iosevka Nerd Font Mono', 'monospace', monospace",
+  "window.menuBarVisibility": "toggle",
+  "dotnet.server.useOmnisharp": true,
+  "glassit.alpha": 220,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": -1,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
   }
 }
