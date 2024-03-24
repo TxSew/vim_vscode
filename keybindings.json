@@ -86,11 +86,11 @@
     "command": "workbench.action.focusFirstEditorGroup"
   },
   {
-    "key": "ctrl+n",
+    "key": "ctrl+m ctrl+m",
     "command": "explorer.newFile"
   },
   {
-    "key": "ctrl+m ctrl+p",
+    "key": "ctrl+m ctrl+n",
     "command": "explorer.newFolder"
   },
   {
